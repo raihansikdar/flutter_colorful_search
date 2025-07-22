@@ -19,4 +19,22 @@ Add this to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  flutter_colorful_search: ^0.0.1
+  flutter_colorful_search: ^1.0.0
+```
+
+## 🧩 Getting Started
+Simply import the package in your Dart file:
+```
+import 'package:flutter_colorful_search/flutter_colorful_search.dart';
+
+```
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+```text
+MIT License
+
+Copyright (c) 2025 Raihan Sikdar
+
+Permission is hereby granted, free of charge, to any person obtaining a copy...
