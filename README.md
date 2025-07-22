@@ -12,6 +12,13 @@ A lightweight and customizable Flutter widget to highlight matching substrings w
 - 🧩 Easily pluggable in ListViews, search bars, and suggestion widgets
 
 ---
+| Parameter            | Type         | Description                                                       |
+| -------------------- | ------------ | ----------------------------------------------------------------- |
+| `listItem`           | `String`     | The full string to be displayed.                                  |
+| `searchText`         | `String`     | The string to be highlighted if found in `listItem`.              |
+| `normalTextStyle`    | `TextStyle?` | Optional. Style for non-matching text.                            |
+| `highlightTextStyle` | `TextStyle?` | Optional. Style for the matching/highlighted portion of the text. |
+
 
 ## 📦 Installation
 
