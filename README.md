@@ -36,11 +36,6 @@ import 'package:flutter_colorful_search/flutter_colorful_search.dart';
 
 ```
 
-## 👨‍💻 Author
-```
-Maintained by Raihan Sikdar.
-For issues or contributions, visit the GitHub repo.
-```
 ## 📝 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
