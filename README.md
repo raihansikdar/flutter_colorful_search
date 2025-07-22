@@ -36,7 +36,12 @@ import 'package:flutter_colorful_search/flutter_colorful_search.dart';
 
 ```
 
-## License
+## 👨‍💻 Author
+```
+Maintained by Raihan Sikdar.
+For issues or contributions, visit the GitHub repo.
+```
+## 📝 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ```text
@@ -45,3 +50,4 @@ MIT License
 Copyright (c) 2025 Raihan Sikdar
 
 Permission is hereby granted, free of charge, to any person obtaining a copy...
+```
