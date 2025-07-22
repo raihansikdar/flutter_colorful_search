@@ -87,6 +87,7 @@ class _FlutterColorfulSearchingExampleState extends State<FlutterColorfulSearchi
             ),
 
             const SizedBox(height: 20),
+
             Expanded(
               child: ListView.separated(
                 itemCount: items.where((item) => item.toLowerCase().contains(searchTerm)).length,
@@ -104,7 +105,6 @@ class _FlutterColorfulSearchingExampleState extends State<FlutterColorfulSearchi
                 separatorBuilder: (context, index) => const SizedBox(),
               ),
             ),
-
           ],
         ),
       ),
