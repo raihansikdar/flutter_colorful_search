@@ -1,6 +1,6 @@
 name: flutter_colorful_search
 description: "A lightweight Flutter widget to highlight matching text segments within a string using customizable colorful styles — perfect for search and autocomplete UIs."
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/raihansikdar/flutter_colorful_search
 repository: https://github.com/raihansikdar/flutter_colorful_search
 issue_tracker: https://github.com/raihansikdar/flutter_colorful_search/issues

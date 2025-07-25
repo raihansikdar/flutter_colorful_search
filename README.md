@@ -26,7 +26,7 @@ Add this to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  flutter_colorful_search: ^1.0.0
+  flutter_colorful_search: ^1.0.1
 ```
 
 ## 🧩 Getting Started
