@@ -34,7 +34,8 @@ class FlutterColorfulSearch extends StatelessWidget {
     if (searchText.isEmpty) {
       return Text(
         listItem,
-        style: normalTextStyle ??
+        style:
+            normalTextStyle ??
             const TextStyle(color: Colors.black, fontSize: 14.2),
       );
     }
@@ -48,31 +49,36 @@ class FlutterColorfulSearch extends StatelessWidget {
       final index = lowerCaseText.indexOf(lowerCaseSearchTerm, start);
 
       if (index == -1) {
-        spans.add(TextSpan(
-          text: listItem.substring(start),
-          style: normalTextStyle ??
-              const TextStyle(color: Colors.black, fontSize: 14.2),
-        ));
+        spans.add(
+          TextSpan(
+            text: listItem.substring(start),
+            style:
+                normalTextStyle ??
+                const TextStyle(color: Colors.black, fontSize: 14.2),
+          ),
+        );
         break;
       }
+
       /// Add unhighlighted part before match
       if (index > start) {
-        spans.add(TextSpan(
-          text: listItem.substring(start, index),
-          style: normalTextStyle ??
-              const TextStyle(color: Colors.black, fontSize: 14.2),
-        ));
+        spans.add(
+          TextSpan(
+            text: listItem.substring(start, index),
+            style:
+                normalTextStyle ??
+                const TextStyle(color: Colors.black, fontSize: 14.2),
+          ),
+        );
       }
 
       /// Add highlighted match
       spans.add(
         TextSpan(
           text: listItem.substring(index, index + searchText.length),
-          style: highlightTextStyle ??
-              const TextStyle(
-                color: Colors.red,
-                fontWeight: FontWeight.bold,
-              ),
+          style:
+              highlightTextStyle ??
+              const TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
         ),
       );
 
@@ -80,8 +86,6 @@ class FlutterColorfulSearch extends StatelessWidget {
       start = index + searchText.length;
     }
 
-    return RichText(
-      text: TextSpan(children: spans),
-    );
+    return RichText(text: TextSpan(children: spans));
   }
 }

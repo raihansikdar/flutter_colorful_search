@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_colorful_search/flutter_colorful_search.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -25,10 +26,12 @@ class FlutterColorfulSearchingExample extends StatefulWidget {
   const FlutterColorfulSearchingExample({super.key});
 
   @override
-  State<FlutterColorfulSearchingExample> createState() => _FlutterColorfulSearchingExampleState();
+  State<FlutterColorfulSearchingExample> createState() =>
+      _FlutterColorfulSearchingExampleState();
 }
 
-class _FlutterColorfulSearchingExampleState extends State<FlutterColorfulSearchingExample> {
+class _FlutterColorfulSearchingExampleState
+    extends State<FlutterColorfulSearchingExample> {
   // Sample list of items to search through
   final List<String> items = [
     'apple ',
@@ -62,9 +65,7 @@ class _FlutterColorfulSearchingExampleState extends State<FlutterColorfulSearchi
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 44, 32, 32),
-      appBar: AppBar(
-        title: const Text('Flutter Colorful Search Example'),
-      ),
+      appBar: AppBar(title: const Text('Flutter Colorful Search Example')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -93,27 +94,36 @@ class _FlutterColorfulSearchingExampleState extends State<FlutterColorfulSearchi
             const SizedBox(height: 20),
             Expanded(
               child: ListView.separated(
-                itemCount: items.where((item) => item.toLowerCase().contains(searchTerm)).length, // Filters matching items
+                itemCount: items
+                    .where((item) => item.toLowerCase().contains(searchTerm))
+                    .length, // Filters matching items
                 itemBuilder: (context, index) {
-                  final filteredItems = items.where((item) => item.toLowerCase().contains(searchTerm)).toList(); //// Again filter for this build
+                  final filteredItems = items
+                      .where((item) => item.toLowerCase().contains(searchTerm))
+                      .toList(); //// Again filter for this build
 
                   return Card(
                     child: ListTile(
                       tileColor: Colors.black,
                       title: FlutterColorfulSearch(
-                        listItem:  filteredItems[index], // Actual string to display
+                        listItem:
+                            filteredItems[index], // Actual string to display
                         searchText: searchTerm, // Text to highlight
-                        normalTextStyle: TextStyle(color: Colors.white,fontSize: 18),
-                        highlightTextStyle: TextStyle(color: Colors.red,fontSize: 18),
+                        normalTextStyle: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
+                        highlightTextStyle: TextStyle(
+                          color: Colors.red,
+                          fontSize: 18,
+                        ),
                       ),
-
                     ),
                   );
                 },
                 separatorBuilder: (context, index) => const SizedBox(),
               ),
             ),
-
           ],
         ),
       ),

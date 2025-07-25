@@ -3,6 +3,7 @@ description: "A lightweight Flutter widget to highlight matching text segments w
 version: 1.0.0
 homepage: https://github.com/raihansikdar/flutter_colorful_search
 repository: https://github.com/raihansikdar/flutter_colorful_search
+issue_tracker: https://github.com/raihansikdar/flutter_colorful_search/issues
 
 environment:
   sdk: ^3.8.1
