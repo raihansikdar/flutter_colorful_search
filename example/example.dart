@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Flutter Colorful Search',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -29,15 +29,16 @@ class FlutterColorfulSearchingExample extends StatefulWidget {
 }
 
 class _FlutterColorfulSearchingExampleState extends State<FlutterColorfulSearchingExample> {
+  // Sample list of items to search through
   final List<String> items = [
     'apple ',
     'banana',
-    'grape fruit',
-    'dragon fruit',
+    'Grape fruit',
+    'draGON fruit',
     'pineapple',
     'blueberry',
     'blackberry',
-    'kiwi fruit',
+    'kiwi Fruit',
     'guava',
     'watermelon',
     'papaya',
@@ -47,7 +48,7 @@ class _FlutterColorfulSearchingExampleState extends State<FlutterColorfulSearchi
     'peach',
     'plum',
     'strawberry',
-    'apple cinnamon',
+    'APPLE cinnamon',
     'lemon lime',
     'cherry blast',
     'coconut',
@@ -55,12 +56,12 @@ class _FlutterColorfulSearchingExampleState extends State<FlutterColorfulSearchi
     'star fruit',
   ];
 
-  String searchTerm = '';
+  String searchTerm = ''; // / The text entered by the user for searching
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange.shade50,
+      backgroundColor: Color.fromARGB(255, 44, 32, 32),
       appBar: AppBar(
         title: const Text('Flutter Colorful Search Example'),
       ),
@@ -69,15 +70,18 @@ class _FlutterColorfulSearchingExampleState extends State<FlutterColorfulSearchi
         child: Column(
           children: [
             TextFormField(
+              style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 labelText: 'Search',
                 hintText: 'Search...',
+                labelStyle: TextStyle(color: Colors.white),
+                hintStyle: TextStyle(color: Colors.white),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                 ),
                 prefixIcon: const Icon(Icons.search),
                 filled: true,
-                fillColor: Colors.white,
+                fillColor: Color.fromARGB(255, 44, 32, 32),
               ),
               onChanged: (value) {
                 setState(() {
@@ -87,24 +91,29 @@ class _FlutterColorfulSearchingExampleState extends State<FlutterColorfulSearchi
             ),
 
             const SizedBox(height: 20),
-
             Expanded(
               child: ListView.separated(
-                itemCount: items.where((item) => item.toLowerCase().contains(searchTerm)).length,
+                itemCount: items.where((item) => item.toLowerCase().contains(searchTerm)).length, // Filters matching items
                 itemBuilder: (context, index) {
-                  final filteredItems = items.where((item) => item.toLowerCase().contains(searchTerm)).toList();
+                  final filteredItems = items.where((item) => item.toLowerCase().contains(searchTerm)).toList(); //// Again filter for this build
+
                   return Card(
                     child: ListTile(
+                      tileColor: Colors.black,
                       title: FlutterColorfulSearch(
-                        listItem:  filteredItems[index],
-                        searchText: searchTerm,
+                        listItem:  filteredItems[index], // Actual string to display
+                        searchText: searchTerm, // Text to highlight
+                        normalTextStyle: TextStyle(color: Colors.white,fontSize: 18),
+                        highlightTextStyle: TextStyle(color: Colors.red,fontSize: 18),
                       ),
+
                     ),
                   );
                 },
                 separatorBuilder: (context, index) => const SizedBox(),
               ),
             ),
+
           ],
         ),
       ),

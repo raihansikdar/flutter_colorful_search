@@ -35,7 +35,23 @@ Simply import the package in your Dart file:
 import 'package:flutter_colorful_search/flutter_colorful_search.dart';
 
 ```
+## ✅ Usage Example
+### Go to example section to get full code.
+```
+ ListTile(
+    tileColor: Colors.black,
+    title: FlutterColorfulSearch(
+      listItem:  filteredItems[index], // Actual string to display
+      searchText: searchTerm, // Text to highlight
+      normalTextStyle: TextStyle(color: Colors.white,fontSize: 18),
+      highlightTextStyle: TextStyle(color: Colors.red,fontSize: 18),
+    ),
+  ),
+                    
+```
 
+## 🔍 Search Example
+![flutter_colorful_search](assets/search.gif)
 ## 📝 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
