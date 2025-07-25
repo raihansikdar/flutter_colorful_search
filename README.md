@@ -51,7 +51,8 @@ import 'package:flutter_colorful_search/flutter_colorful_search.dart';
 ```
 
 ## 🔍 Search Example
-![flutter_colorful_search](assets/search.gif)
+![flutter_colorful_search](https://github.com/raihansikdar/flutter_colorful_search/blob/main/assets/search.gif?raw=true)
+
 ## 📝 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
